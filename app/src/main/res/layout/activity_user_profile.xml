@@ -34,6 +34,7 @@
                 android:orientation="horizontal"
                 android:gravity="center_vertical"
                 android:layout_marginBottom="@dimen/activity_small_margin">
+
                 <ImageView
                     android:layout_width="40dp"
                     android:layout_height="40dp"
@@ -140,28 +141,6 @@
                 android:layout_gravity="center"
                 android:layout_margin="@dimen/activity_general_margin"
                 android:hint="@string/sexe_edit_hint"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/editButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@android:color/white"
-                android:enabled="true"
-                android:padding="@dimen/activity_general_margin"
-                android:text="@string/edit" />
-
-            <Button
-                android:id="@+id/cancelEditionButton"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:layout_marginTop="20dp"
-                android:background="@android:color/white"
-                android:padding="@dimen/activity_general_margin"
-                android:text="@string/cancel"
                 android:visibility="gone" />
 
         </LinearLayout>

@@ -47,8 +47,8 @@ public class UserProfileActivity extends Fragment {
         getActivity().setTitle("My profile");
 
 
-        mEditProfileButton = (Button) view.findViewById(R.id.editButton);
-        mCancelEditionButton = (Button) view.findViewById(R.id.cancelEditionButton);
+      //  mEditProfileButton = (Button) view.findViewById(R.id.editButton);
+       // mCancelEditionButton = (Button) view.findViewById(R.id.cancelEditionButton);
         mUsernameTextView = (TextView) view.findViewById(R.id.userNameTitle);
         mUsermailTextView = (TextView) view.findViewById(R.id.userEmailTitle);
         mUserSignUpDateTextView = (TextView) view.findViewById(R.id.userSignUpDate);
