@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:text="@string/useremail"
             android:textColor="@android:color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:textAlignment="center"
             android:textStyle="normal|bold"
             android:paddingRight="10dp"
