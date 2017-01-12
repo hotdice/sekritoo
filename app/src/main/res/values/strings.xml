@@ -23,7 +23,7 @@
     <string name="username">%1$s</string>
     <string name="useremail">Email\n%1$s</string>
     <string name="userCountry">Country: %1$s</string>
-    <string name="userSignUpDate">Created\n %1$s</string>
+    <string name="userSignUpDate">Created at\n %1$s</string>
     <string name="userLastVisitDate">Last Visit\n%1$s</string>
     <string name="userSexe">Gender: %1$s</string>
 

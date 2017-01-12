@@ -22,12 +22,28 @@ public class Utils {
 
         if (diffDays > 3)
             return DateFormat.getDateInstance(DateFormat.MEDIUM).format(date);
-        else if (diffDays != 0)
-            return diffDays + " days ago";
-        else if (diffHours != 0)
-            return diffHours + " hours ago";
-        else if (diffMinutes != 0)
-            return diffMinutes + " minutes ago";
+        else if (diffDays != 0){
+            if(diffDays == 1)
+                return diffDays + " day ago";
+            else
+                return diffDays + " days ago";
+        }
+
+        else if (diffHours != 0){
+            if(diffHours==1)
+            return diffHours + " hour ago";
+            else
+                return diffHours + " hours ago";
+        }
+
+        else if (diffMinutes != 0){
+            if(diffMinutes ==1)
+                return diffMinutes + " minute ago";
+            else
+                return diffMinutes + " minutes ago";
+        }
+
+
         else return diffSeconds + " seconds ago";
 
     }

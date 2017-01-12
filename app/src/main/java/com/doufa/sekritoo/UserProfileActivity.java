@@ -79,11 +79,11 @@ public class UserProfileActivity extends Fragment {
 //        mUpdateSexeEditext = (EditText) findViewById(R.id.updateSexeEdittext);
 //    }
 
-//    @Override
-//    protected void onStart() {
-//        super.onStart();
-//        refreshProfileInformation();
-//    }
+    @Override
+    public void onStart() {
+        super.onStart();
+        refreshProfileInformation();
+    }
 
     public void refreshProfileInformation() {
 
