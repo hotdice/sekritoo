@@ -19,11 +19,12 @@
     <string name="sekrito_slogon2">share us your secret and/or your story anonymously.</string>
 
 
-    <!-- Auth0 user profile -->
-    <string name="username">Name: %1$s</string>
-    <string name="useremail">Email: %1$s</string>
+    <!-- user profile -->
+    <string name="username"> %1$s</string>
+    <string name="useremail">Email\n%1$s</string>
     <string name="userCountry">Country: %1$s</string>
-    <string name="userSignUpDate">Signed up since: %1$s</string>
+    <string name="userSignUpDate">Member Since\n %1$s</string>
+    <string name="userLastVisitDate">Last Visit\n%1$s</string>
     <string name="userSexe">Gender: %1$s</string>
 
     <string name="country_edit_hint">Add the country…</string>

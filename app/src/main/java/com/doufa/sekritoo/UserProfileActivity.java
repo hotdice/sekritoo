@@ -18,6 +18,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.text.DateFormat;
+import java.util.Date;
+import java.util.Locale;
+
 public class UserProfileActivity extends Fragment {
 
     private FirebaseUser mUser;
@@ -27,6 +31,7 @@ public class UserProfileActivity extends Fragment {
     private TextView mUsermailTextView;
     private TextView mUserCountryTextView;
     private TextView mUserSignUpDateTextView;
+    private TextView mUserLastVisitTextView;
     private TextView mUserSexeTextView;
 
     //    private EditText mUpdateCountryEditext;
@@ -52,9 +57,11 @@ public class UserProfileActivity extends Fragment {
         mUsernameTextView = (TextView) view.findViewById(R.id.userNameTitle);
         mUsermailTextView = (TextView) view.findViewById(R.id.userEmailTitle);
         mUserSignUpDateTextView = (TextView) view.findViewById(R.id.userSignUpDate);
-        mUserCountryTextView = (TextView) view.findViewById(R.id.userCountryTitle);
-        mUserSexeTextView = (TextView) view.findViewById(R.id.userSexe);
-        mUpdateSexeEditext = (EditText) view.findViewById(R.id.updateSexeEdittext);
+        mUserLastVisitTextView = (TextView) view.findViewById(R.id.userLastVisitDate);
+
+        // mUserCountryTextView = (TextView) view.findViewById(R.id.userCountryTitle);
+       // mUserSexeTextView = (TextView) view.findViewById(R.id.userSexe);
+        //mUpdateSexeEditext = (EditText) view.findViewById(R.id.updateSexeEdittext);
         refreshProfileInformation();
     }
 //    @Override
@@ -100,10 +107,12 @@ public class UserProfileActivity extends Fragment {
                         // Get user information
                         User user = dataSnapshot.getValue(User.class);
 
-                        mUsernameTextView.setText(String.format(getString(R.string.username), user.username));
-                        mUsermailTextView.setText(String.format(getString(R.string.useremail), user.email));
-                        mUserSignUpDateTextView.setText(String.format(getString(R.string.userSignUpDate),user.createdAt));
 
+                        mUsermailTextView.setText(String.format(getString(R.string.useremail), user.email));
+                        mUsernameTextView.setText(String.format(getString(R.string.username), user.username));
+                        mUserSignUpDateTextView.setText(String.format(getString(R.string.userSignUpDate), DateFormat.getDateInstance(DateFormat.MEDIUM).format(user.createdAt)));
+                        mUserLastVisitTextView.setText(String.format(getString(R.string.userLastVisitDate),
+                                DateFormat.getDateTimeInstance().format(user.lastVisit)));
                     }
                 });
 

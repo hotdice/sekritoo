@@ -1,5 +1,7 @@
 package com.doufa.sekritoo.posts.utils;
 
+import java.text.DateFormat;
+import java.text.DateFormatSymbols;
 import java.util.Date;
 
 /**
@@ -19,14 +21,14 @@ public class Utils {
 
 
         if (diffDays > 3)
-            return new Date(date) + " ";
+            return DateFormat.getDateInstance(DateFormat.MEDIUM).format(date);
         else if (diffDays != 0)
-            return diffDays + " days";
+            return diffDays + " days ago";
         else if (diffHours != 0)
-            return diffHours + " hours";
+            return diffHours + " hours ago";
         else if (diffMinutes != 0)
-            return diffMinutes + " minutes";
-        else return diffSeconds + " seconds";
+            return diffMinutes + " minutes ago";
+        else return diffSeconds + " seconds ago";
 
     }
 }

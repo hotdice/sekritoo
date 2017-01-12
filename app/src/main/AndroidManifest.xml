@@ -25,14 +25,14 @@
             </intent-filter>
         </activity>
 
-        <activity android:name="com.doufa.sekritoo.posts.PostDetailActivity" >
+        <activity android:name=".posts.PostDetailActivity" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.doufa.sekritoo.posts.PostsHomeActivity" />
+                android:value=".posts.PostsHomeActivity" />
         </activity>
 
         <activity
-            android:name="com.doufa.sekritoo.MainActivity"
+            android:name=".MainActivity"
             android:label="@string/title_activity_main"
             android:theme="@style/AppTheme.NoActionBar" />
 
