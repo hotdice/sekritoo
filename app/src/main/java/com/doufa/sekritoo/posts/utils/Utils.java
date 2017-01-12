@@ -21,7 +21,7 @@ public class Utils {
 
 
         if (diffDays > 3)
-            return DateFormat.getDateInstance(DateFormat.MEDIUM).format(date);
+            return DateFormat.getDateTimeInstance().format(date);
         else if (diffDays != 0){
             if(diffDays == 1)
                 return diffDays + " day ago";

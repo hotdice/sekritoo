@@ -94,18 +94,7 @@ public class MainActivity extends AppCompatActivity
             case R.id.nav_home:
                 fragment= new PostsHomeActivity();
                 break;
-//            case R.id.fab_new_post:
-//                // Button launches NewPostActivity
-//                Fragment fr= null;
-//                findViewById(R.id.fab_new_post).setOnClickListener(new View.OnClickListener() {
-//                    @Override
-//                    public void onClick(View v) {
-//                       // startActivity(new Intent(PostsHomeActivity.this, NewPostActivity.class));
-//                        Fragment fr= new NewPostActivity();
-//                            }
-//                });
-//                fragment =  fr;
-//                break;
+
             case R.id.nav_logout:
                 FirebaseAuth.getInstance().signOut();
                 startActivity(new Intent(this, SignInActivity.class));

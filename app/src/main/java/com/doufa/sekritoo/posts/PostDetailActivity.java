@@ -50,6 +50,7 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
     private EditText mCommentField;
     private Button mCommentButton;
     private RecyclerView mCommentsRecycler;
+    private String postAuthorUid;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,6 +94,8 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
             public void onDataChange(DataSnapshot dataSnapshot) {
                 // Get Post object and use the values to update the UI
                 Post post = dataSnapshot.getValue(Post.class);
+                postAuthorUid=post.uid;
+
                 // [START_EXCLUDE]
                 mAuthorView.setText(post.author);
                 mTitleView.setText(post.title);
@@ -144,6 +147,7 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
                 mCommentField.setError(REQUIRED);
             } else
                 postComment();
+
         }
     }
 
@@ -159,13 +163,19 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
 
                         // Create new comment object
                         String commentText = mCommentField.getText().toString();
-                        Comment comment = new Comment(uid, authorName, commentText);
+                        Comment comment;
+                        if(uid.equals(postAuthorUid))
+                        comment = new Comment(uid, "Secret owner", commentText);
+                        else
+                            comment = new Comment(uid, authorName, commentText);
 
                         // Push the comment, it will appear in the list
                         mCommentsReference.push().setValue(comment);
 
                         // Clear the field
                         mCommentField.setText(null);
+
+                        mPostReference.child("commCount").setValue(mAdapter.getItemCount()+1);
                     }
 
                     @Override

@@ -75,8 +75,7 @@ public class PostsHomeActivity extends Fragment {
             @Override
             public void onClick(View v) {
                  startActivity(new Intent(getActivity().getApplicationContext(), NewPostActivity.class));
-//                Fragment f = new NewPostActivity();
-//                getFragmentManager().beginTransaction().replace(getId(),f).commit();
+
             }
         });
 

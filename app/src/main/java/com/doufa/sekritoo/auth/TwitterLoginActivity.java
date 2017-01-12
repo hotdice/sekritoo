@@ -126,7 +126,7 @@
 //    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
 //        super.onActivityResult(requestCode, resultCode, data);
 //
-//        // Pass the activity result to the Twitter login button.
+//        // Pass the activity result to the Twitter include_sign_in button.
 //        mLoginButton.onActivityResult(requestCode, resultCode, data);
 //    }
 //    // [END on_activity_result]

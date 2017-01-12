@@ -19,7 +19,7 @@
 //import com.google.firebase.auth.FirebaseUser;
 //
 ///**
-// * Activity to demonstrate anonymous login and account linking (with an email/password account).
+// * Activity to demonstrate anonymous include_sign_in and account linking (with an email/password account).
 // */
 //public class AnonymousAuthActivity extends BaseActivity implements
 //        View.OnClickListener {

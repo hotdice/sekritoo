@@ -5,9 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TabHost;
 import android.widget.Toast;
 
 import com.doufa.sekritoo.R;
@@ -33,6 +36,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private EditText mPasswordField;
     private Button mSignInButton;
     private Button mSignUpButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

@@ -11,12 +11,13 @@ import com.doufa.sekritoo.posts.utils.Utils;
 
 public class PostViewHolder extends RecyclerView.ViewHolder {
 
-    public TextView titleView;
-    public TextView authorView;
-    public ImageView starView;
-    public TextView numStarsView;
-    public TextView bodyView;
-    public TextView posted_atView;
+    private TextView titleView;
+    private TextView authorView;
+    private ImageView starView;
+    private TextView numStarsView;
+    private TextView bodyView;
+    private TextView posted_atView;
+    private TextView numCommView;
 
     public PostViewHolder(View itemView) {
         super(itemView);
@@ -25,6 +26,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         authorView = (TextView) itemView.findViewById(R.id.post_author);
         starView = (ImageView) itemView.findViewById(R.id.star);
         numStarsView = (TextView) itemView.findViewById(R.id.post_num_stars);
+        numCommView = (TextView) itemView.findViewById(R.id.post_num_comm);
         bodyView = (TextView) itemView.findViewById(R.id.post_body);
         posted_atView = (TextView) itemView.findViewById(R.id.post_date);
     }
@@ -33,6 +35,7 @@ public class PostViewHolder extends RecyclerView.ViewHolder {
         titleView.setText(post.title);
         authorView.setText(post.author);
         numStarsView.setText(String.valueOf(post.starCount));
+        numCommView.setText(String.valueOf(post.commCount));
         bodyView.setText(post.body);
         posted_atView.setText(Utils.CalPostTime(post.posted_at));
         starView.setOnClickListener(starClickListener);

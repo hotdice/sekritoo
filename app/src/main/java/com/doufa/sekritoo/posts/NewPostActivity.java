@@ -139,7 +139,6 @@ public class NewPostActivity extends AppCompatActivity {
                         finish();
 
 
-                        // getActivity().getFragmentManager().beginTransaction().remove(getFragmentManager().findFragmentById(getId())).commit();
                         // [END_EXCLUDE]
                     }
 

@@ -16,6 +16,7 @@ public class Post {
     public String body;
     public long posted_at;
     public int starCount = 0;
+    public int commCount = 0;
     public Map<String, Boolean> stars = new HashMap<>();
 
     public Post() {
@@ -41,6 +42,7 @@ public class Post {
         result.put("posted_at", posted_at);
         result.put("starCount", starCount);
         result.put("stars", stars);
+        result.put("commCount", commCount);
 
         return result;
     }
