@@ -17,20 +17,23 @@
         android:layout_width="150dp"
         android:layout_height="150dp"
         android:src="@mipmap/ic_sekritoo_short_t"
-        />
+        android:adjustViewBounds="true"
+        android:cropToPadding="true" />
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sekritoo_slogon1"
+        android:text="@string/sekritoo_slogon3"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:textStyle="normal|bold"
+        android:visibility="visible"
         />
     <TextView
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/sekritoo_slogon2"
-        android:textStyle="normal|bold" />
+        android:textStyle="normal|bold"
+        android:visibility="gone"/>
 
 </LinearLayout>
