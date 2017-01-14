@@ -95,10 +95,10 @@ public class NewPostActivity extends AppCompatActivity {
         final String body = mBodyField.getText().toString();
 
         // Title is required
-        if (TextUtils.isEmpty(title)) {
-            mTitleField.setError(REQUIRED);
-            return;
-        }
+//        if (TextUtils.isEmpty(title)) {
+//            mTitleField.setError(REQUIRED);
+//            return;
+//        }
 
         // Body is required
         if (TextUtils.isEmpty(body)) {

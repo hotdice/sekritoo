@@ -11,8 +11,8 @@
     <string name="show_username">Show my username </string>
     <string name="sign_in">Sign In</string>
     <string name="heading_recent">Recent</string>
-    <string name="heading_my_posts">My Posts</string>
-    <string name="heading_my_top_posts">Top Posts</string>
+    <string name="heading_my_posts">My Secrets</string>
+    <string name="heading_my_top_posts">Top Secrets</string>
     <string name="title_activity_main">Main Activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
