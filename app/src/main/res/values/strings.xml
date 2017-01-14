@@ -6,8 +6,8 @@
     <string name="hint_username">Username</string>
     <string name="hint_email">Email</string>
     <string name="hint_email_username"> Email or username</string>
-    <string name="hint_new_post">Write your secret...</string>
-    <string name="hint_new_post_title">title your secret</string>
+    <string name="hint_new_post">Write your secret&#8230;</string>
+    <string name="hint_new_post_title">Title your secret&#8230;</string>
     <string name="show_username">Show my username </string>
     <string name="sign_in">Sign In</string>
     <string name="heading_recent">Recent</string>
@@ -26,8 +26,16 @@
 
     <string name="sekritoo_slogon1_ar">الناس لكلّ عندها أسرار.</string>
     <string name="sekritoo_slogon2_ar">شاركنا سرّك و إلاّ حكايتك من غير ما يعرفك حدّ.</string>
+    
+    <string name="sign_msg">Sing up with a valid email if you want to recover your password if lost. Otherwise use a fake one\n(Exp: nickname@sekritoo.com).</string>
+       <string name="sign_notif">Your identity remains unknown, no one will ever know you.</string>
 
+    <!--sign up/in activity  text-->
+    <string name="text_forgotPassword">Forgot Password?</string>
+    <string name="button_sendResetMail">Send reset mail</string>
+    <string name="field_resetEmail">Enter your email&#8230;</string>
 
+    <!---->
 
     <!-- user profile -->
     <string name="username">%1$s</string>
@@ -37,8 +45,8 @@
     <string name="userLastVisitDate">Last Visit\n%1$s</string>
     <string name="userSexe">Gender: %1$s</string>
 
-    <string name="country_edit_hint">Add the country…</string>
-    <string name="sexe_edit_hint">Add your sexe…</string>
+    <string name="country_edit_hint">Add the country&#8230;</string>
+    <string name="sexe_edit_hint">Add your sexe&#8230;</string>
 
     <string name="edit">Edit Profile</string>
     <string name="save">Save Changes</string>
@@ -48,4 +56,12 @@
     <!-- END Auth0 user profile -->
 
     <string name="lorem"> My first post text</string>
+
+
+    <!--activity main menu items-->
+    <string name="item_home">Home</string>
+    <string name="item_account">Account</string>
+    <string name="item_secrets">Secrets</string>
+    <string name="item_logout">Logout</string>
+    <!---->
 </resources>

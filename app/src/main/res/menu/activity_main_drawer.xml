@@ -6,19 +6,19 @@
         <item
             android:id="@+id/nav_home"
             android:icon="@drawable/ic_action_home"
-            android:title="Home" />
+            android:title="@string/item_home" />
         <item
             android:id="@+id/nav_secret"
             android:icon="@drawable/ic_toll"
-            android:title="Secrets" />
+            android:title="@string/item_secrets" />
         <item
             android:id="@+id/nav_account"
             android:icon="@drawable/ic_action_user"
-            android:title="Profile" />
+            android:title="@string/item_account" />
         <item
             android:id="@+id/nav_logout"
             android:icon="@drawable/ic_action_exit"
-            android:title="Logout" />
+            android:title="@string/item_logout" />
     </group>
 
 
