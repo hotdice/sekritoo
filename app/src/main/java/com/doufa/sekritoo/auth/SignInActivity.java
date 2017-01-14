@@ -2,6 +2,7 @@ package com.doufa.sekritoo.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
@@ -31,9 +32,12 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 
     private EditText mEmailField;
     private EditText mPasswordField;
+    private EditText mResetEmailField;
+
     private Button mSignInButton;
     private Button mSignUpButton;
-
+    private Button mForgotPasswordButton;
+    private Button mSendResetEmailButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -46,12 +50,18 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         // Views
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
+        mResetEmailField = (EditText) findViewById(R.id.field_resetEmail);
+
         mSignInButton = (Button) findViewById(R.id.button_sign_in);
         mSignUpButton = (Button) findViewById(R.id.button_sign_up);
+        mForgotPasswordButton =(Button) findViewById(R.id.button_forgot_password);
+        mSendResetEmailButton =(Button) findViewById(R.id.button_sendResetMail);
 
         // Click listeners
         mSignInButton.setOnClickListener(this);
         mSignUpButton.setOnClickListener(this);
+        mForgotPasswordButton.setOnClickListener(this);
+        mSendResetEmailButton.setOnClickListener(this);
     }
 
     @Override
@@ -60,7 +70,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
 
         // Check auth on Activity start
         if (mAuth.getCurrentUser() != null) {
-            onAuthSuccess(mAuth.getCurrentUser());
+            onSignInSuccess(mAuth.getCurrentUser());
         }
     }
 
@@ -71,8 +81,8 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         }
 
         showProgressDialog();
-        String email = mEmailField.getText().toString();
-        String password = mPasswordField.getText().toString();
+        final String email = mEmailField.getText().toString();
+        final String password = mPasswordField.getText().toString();
 
         mAuth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -82,13 +92,15 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                         hideProgressDialog();
 
                         if (task.isSuccessful()) {
-                            onAuthSuccess(task.getResult().getUser());
+                            onSignInSuccess(task.getResult().getUser());
                         } else {
-                            Toast.makeText(SignInActivity.this, "Sign In Failed",
-                                    Toast.LENGTH_SHORT).show();
+
+                            Toast.makeText(SignInActivity.this, task.getException().getMessage(),
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                 });
+
     }
 
     private void signUp() {
@@ -96,7 +108,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         if (!validateForm()) {
             return;
         }
-
         showProgressDialog();
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
@@ -107,24 +118,59 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         Log.d(TAG, "createUser:onComplete:" + task.isSuccessful());
                         hideProgressDialog();
-
                         if (task.isSuccessful()) {
-                            onAuthSuccess(task.getResult().getUser());
+                            onSignUpSuccess(task.getResult().getUser());
                         } else {
-                            Toast.makeText(SignInActivity.this, "Sign Up Failed",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(SignInActivity.this, task.getException().getMessage(),
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                 });
     }
 
-    private void onAuthSuccess(FirebaseUser user) {
+    private void resetPassword(){
+        if (TextUtils.isEmpty(mResetEmailField.getText().toString())) {
+            mResetEmailField.setError("Required");
+        } else {
+
+            showProgressDialog();
+            String email = mResetEmailField.getText().toString();
+
+            mAuth.sendPasswordResetEmail(email).addOnCompleteListener(this, new OnCompleteListener<Void>() {
+                @Override
+                public void onComplete(@NonNull Task<Void> task) {
+                    Log.d(TAG, "ResetPassword:onComplete:" + task.isSuccessful());
+                    hideProgressDialog();
+
+                    if (task.isSuccessful()) {
+                        Toast.makeText(SignInActivity.this,"Check your mail !",
+                                Toast.LENGTH_LONG).show();
+                        mSendResetEmailButton.setVisibility(View.GONE);
+                        mResetEmailField.setVisibility(View.GONE);
+                    } else {
+                        Toast.makeText(SignInActivity.this, task.getException().getMessage(),
+                                Toast.LENGTH_LONG).show();
+                    }
+                }
+            });
+        }
+    }
+
+    private void onSignInSuccess(FirebaseUser user) {
+
+        // Update last visit date
+        mDatabase.child("users").child(user.getUid())
+                .child("lastVisit").setValue(System.currentTimeMillis());
+
+        // Go to PostsHomeActivity
+        startActivity(new Intent(SignInActivity.this, MainActivity.class));
+        finish();
+    }
+
+    private void onSignUpSuccess(FirebaseUser user) {
         String username = usernameFromEmail(user.getEmail());
-
-
         // Write new user
         writeNewUser(user.getUid(), username, user.getEmail());
-
         // Go to PostsHomeActivity
         startActivity(new Intent(SignInActivity.this, MainActivity.class));
         finish();
@@ -173,6 +219,13 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
             signIn();
         } else if (i == R.id.button_sign_up) {
             signUp();
+        }
+        else if (i==R.id.button_forgot_password){
+            mSendResetEmailButton.setVisibility(View.VISIBLE);
+            mResetEmailField.setVisibility(View.VISIBLE);
+
+        } else if(i== R.id.button_sendResetMail){
+            resetPassword();
         }
     }
 }

@@ -47,7 +47,7 @@ public class UserProfileActivity extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("Profile");
+        getActivity().setTitle("Account");
 
 
       //  mEditProfileButton = (Button) view.findViewById(R.id.editButton);
@@ -104,8 +104,6 @@ public class UserProfileActivity extends Fragment {
                     public void onDataChange(DataSnapshot dataSnapshot) {
                         // Get user information
                         User user = dataSnapshot.getValue(User.class);
-
-
                         mUsermailTextView.setText(String.format(getString(R.string.useremail), user.email));
                         mUsernameTextView.setText(String.format(getString(R.string.username), user.username));
                         mUserSignUpDateTextView.setText(String.format(getString(R.string.userSignUpDate), DateFormat.getDateInstance(DateFormat.MEDIUM).format(user.createdAt)));
