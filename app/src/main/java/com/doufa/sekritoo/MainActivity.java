@@ -2,9 +2,9 @@ package com.doufa.sekritoo;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.support.design.widget.NavigationView;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentTransaction;
-import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
@@ -92,8 +92,12 @@ public class MainActivity extends AppCompatActivity
                 fragment = new UserProfileActivity();
                 break;
             case R.id.nav_home:
+                fragment= new HomeActivity();
+                break;
+            case R.id.nav_secret:
                 fragment= new PostsHomeActivity();
                 break;
+
 
             case R.id.nav_logout:
                 FirebaseAuth.getInstance().signOut();

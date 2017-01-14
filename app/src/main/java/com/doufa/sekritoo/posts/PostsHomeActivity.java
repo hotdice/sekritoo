@@ -28,14 +28,14 @@ public class PostsHomeActivity extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         //returning our layout file
         //change R.layout.yourlayoutfilename for each of your fragments
-        return inflater.inflate(R.layout.activity_home, container, false);
+        return inflater.inflate(R.layout.activity_secret, container, false);
     }
 
     @Override
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("Home");
+        getActivity().setTitle("Secrets");
                 // Create the adapter that will return a fragment for each section
                 mPagerAdapter = new FragmentPagerAdapter(getFragmentManager()) {
                     private final Fragment[] mFragments = new Fragment[]{
@@ -84,7 +84,7 @@ public class PostsHomeActivity extends Fragment {
 //    @Override
 //    protected void onCreate(Bundle savedInstanceState) {
 //        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_home);
+//        setContentView(R.layout.activity_secret);
 
 //        // Create the adapter that will return a fragment for each section
 //        mPagerAdapter = new FragmentPagerAdapter(getSupportFragmentManager()) {

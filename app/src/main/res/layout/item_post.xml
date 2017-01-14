@@ -73,8 +73,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_marginRight="5dp"
-                app:srcCompat="@drawable/ic_comment"
-                android.defaultConfig.vectorDrawables.useSupportLibrary ="true"
+                android:src="@drawable/ic_action_dialog"
                 android:contentDescription="comment icon" />
 
             <TextView

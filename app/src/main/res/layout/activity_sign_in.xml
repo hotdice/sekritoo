@@ -13,7 +13,7 @@
     <ImageView
         android:id="@+id/icon"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:layout_centerHorizontal="true"
         android:src="@drawable/sekritoo_logo" />
 
@@ -32,7 +32,7 @@
         android:textAlignment="center"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/sekrito_slogon2"
+        android:text="@string/sekritoo_slogon2"
         android:layout_below="@+id/slogan1"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"
         android:layout_marginBottom="@dimen/activity_small_margin"

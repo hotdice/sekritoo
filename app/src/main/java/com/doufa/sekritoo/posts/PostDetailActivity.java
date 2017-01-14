@@ -14,8 +14,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.doufa.sekritoo.R;
 import com.doufa.sekritoo.BaseActivity;
+import com.doufa.sekritoo.R;
 import com.doufa.sekritoo.posts.models.Comment;
 import com.doufa.sekritoo.posts.models.Post;
 import com.doufa.sekritoo.posts.models.User;

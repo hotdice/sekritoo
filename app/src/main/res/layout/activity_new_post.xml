@@ -25,13 +25,13 @@
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
         android:layout_marginTop="5dp"
-        android:hint="Write your post..."
+        android:hint="@string/hint_new_post"
         android:inputType="textMultiLine"
         android:maxLines="10"
         android:scrollHorizontally="false" />
 
     <Switch
-        android:text="Show my username: "
+        android:text="@string/show_username"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/field_body"

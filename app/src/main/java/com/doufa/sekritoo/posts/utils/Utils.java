@@ -1,8 +1,6 @@
 package com.doufa.sekritoo.posts.utils;
 
 import java.text.DateFormat;
-import java.text.DateFormatSymbols;
-import java.util.Date;
 
 /**
  * Created by rayen on 12/12/16.

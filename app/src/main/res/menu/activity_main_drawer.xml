@@ -5,29 +5,33 @@
 
         <item
             android:id="@+id/nav_home"
-            android:icon="@android:drawable/ic_dialog_dialer"
+            android:icon="@drawable/ic_action_home"
             android:title="Home" />
         <item
+            android:id="@+id/nav_secret"
+            android:icon="@drawable/ic_toll"
+            android:title="Secrets" />
+        <item
             android:id="@+id/nav_account"
-            android:icon="@drawable/ic_account_box"
+            android:icon="@drawable/ic_action_user"
             android:title="Profile" />
         <item
             android:id="@+id/nav_logout"
-            android:icon="@drawable/ic_exit_to_app"
+            android:icon="@drawable/ic_action_exit"
             android:title="Logout" />
     </group>
 
 
-    <item android:title="Communicate">
-        <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@drawable/ic_menu_share"
-                android:title="Share" />
-            <item
-                android:id="@+id/nav_send"
-                android:icon="@drawable/ic_menu_send"
-                android:title="Send" />
-        </menu>
-    </item>
+    <!--<item android:title="Communicate">-->
+        <!--<menu>-->
+            <!--<item-->
+                <!--android:id="@+id/nav_share"-->
+                <!--android:icon="@drawable/ic_menu_share"-->
+                <!--android:title="Share" />-->
+            <!--<item-->
+                <!--android:id="@+id/nav_send"-->
+                <!--android:icon="@drawable/ic_menu_send"-->
+                <!--android:title="Send" />-->
+        <!--</menu>-->
+    <!--</item>-->
 </menu>

@@ -1,12 +1,9 @@
 package com.doufa.sekritoo;
 
 import android.app.ProgressDialog;
-import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-
-import java.io.BufferedReader;
 
 
 public class BaseActivity extends AppCompatActivity {

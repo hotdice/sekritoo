@@ -10,6 +10,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.doufa.sekritoo.R;
 import com.doufa.sekritoo.posts.PostDetailActivity;
 import com.doufa.sekritoo.posts.models.Post;
 import com.doufa.sekritoo.posts.viewholder.PostViewHolder;
@@ -22,7 +23,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.MutableData;
 import com.google.firebase.database.Query;
 import com.google.firebase.database.Transaction;
-import com.doufa.sekritoo.R;
 
 public abstract class PostListFragment extends Fragment {
 

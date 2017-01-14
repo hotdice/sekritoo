@@ -11,13 +11,13 @@ import com.doufa.sekritoo.posts.utils.Utils;
 
 public class PostViewHolder extends RecyclerView.ViewHolder {
 
-    private TextView titleView;
-    private TextView authorView;
-    private ImageView starView;
-    private TextView numStarsView;
-    private TextView bodyView;
-    private TextView posted_atView;
-    private TextView numCommView;
+    public TextView titleView;
+    public TextView authorView;
+    public ImageView starView;
+    public TextView numStarsView;
+    public TextView bodyView;
+    public TextView posted_atView;
+    public TextView numCommView;
 
     public PostViewHolder(View itemView) {
         super(itemView);

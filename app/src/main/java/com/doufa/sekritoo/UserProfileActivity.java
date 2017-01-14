@@ -1,8 +1,8 @@
 package com.doufa.sekritoo;
 
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -19,8 +19,6 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.text.DateFormat;
-import java.util.Date;
-import java.util.Locale;
 
 public class UserProfileActivity extends Fragment {
 
@@ -49,7 +47,7 @@ public class UserProfileActivity extends Fragment {
     public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         //you can set the title for your toolbar here for different fragments different titles
-        getActivity().setTitle("My profile");
+        getActivity().setTitle("Profile");
 
 
       //  mEditProfileButton = (Button) view.findViewById(R.id.editButton);

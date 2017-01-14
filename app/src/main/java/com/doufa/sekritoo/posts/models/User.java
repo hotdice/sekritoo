@@ -2,8 +2,6 @@ package com.doufa.sekritoo.posts.models;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
-import java.util.Date;
-
 // [START blog_user_class]
 @IgnoreExtraProperties
 public class User {

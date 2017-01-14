@@ -6,11 +6,14 @@
     <string name="hint_username">Username</string>
     <string name="hint_email">Email</string>
     <string name="hint_email_username"> Email or username</string>
+    <string name="hint_new_post">Write your secret...</string>
+    <string name="hint_new_post_title">title your secret</string>
+    <string name="show_username">Show my username </string>
     <string name="sign_in">Sign In</string>
     <string name="heading_recent">Recent</string>
     <string name="heading_my_posts">My Posts</string>
     <string name="heading_my_top_posts">Top Posts</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">Main Activity</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -18,7 +21,12 @@
     <string name="action_settings">Settings</string>
 
     <string name="sekritoo_slogon1">Everybody has a secret.</string>
-    <string name="sekrito_slogon2">share us your secret and/or your story anonymously.</string>
+    <string name="sekritoo_slogon2">share us your secret and/or your story anonymously.</string>
+
+
+    <string name="sekritoo_slogon1_ar">الناس لكلّ عندها أسرار.</string>
+    <string name="sekritoo_slogon2_ar">شاركنا سرّك و إلاّ حكايتك من غير ما يعرفك حدّ.</string>
+
 
 
     <!-- user profile -->

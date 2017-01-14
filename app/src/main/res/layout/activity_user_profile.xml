@@ -21,7 +21,7 @@
             android:id="@+id/userAvatar"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/ic_action_account_circle_40"
+            android:src="@drawable/ic_face"
             android:paddingTop="@dimen/activity_vertical_margin"
             />
 
@@ -63,7 +63,7 @@
             android:textAlignment="center"
             android:textStyle="normal|bold"
             android:paddingRight="10dp"
-            android:background="@drawable/bordershadow"
+            android:background="@drawable/border_shadow_vertical"
             />
 
 
@@ -78,7 +78,7 @@
             android:textAlignment="center"
             android:paddingRight="10dp"
             android:paddingLeft="10dp"
-            android:background="@drawable/bordershadow"/>
+            android:background="@drawable/border_shadow_vertical"/>
 
         <TextView
             android:id="@+id/userSignUpDate"
