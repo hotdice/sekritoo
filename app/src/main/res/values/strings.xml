@@ -38,6 +38,12 @@
 
     <!---->
 
+
+    <!--post detail activity-->
+    <string name="button_post_comment">Post</string>
+    <string name="field_comment_text">Write a comment...</string>
+    <!---->
+
     <!-- user profile -->
     <string name="username">%1$s</string>
     <string name="useremail">Email\n%1$s</string>
