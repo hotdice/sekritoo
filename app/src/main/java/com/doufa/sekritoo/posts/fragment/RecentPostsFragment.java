@@ -11,7 +11,7 @@ public class RecentPostsFragment extends PostListFragment {
     @Override
     public Query getQuery(DatabaseReference databaseReference) {
         // [START recent_posts_query]
-        // Last 100 posts, these are automatically the 100 most recent
+        // Last 50 posts, these are automatically the 50 most recent
         // due to sorting by push() keys
         Query recentPostsQuery = databaseReference.child("posts")
                 .limitToFirst(50);
