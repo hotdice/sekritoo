@@ -33,6 +33,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private EditText mEmailField;
     private EditText mPasswordField;
     private EditText mResetEmailField;
+    private EditText mSexeField;
 
     private Button mSignInButton;
     private Button mSignUpButton;
@@ -51,7 +52,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
         mResetEmailField = (EditText) findViewById(R.id.field_resetEmail);
-
         mSignInButton = (Button) findViewById(R.id.button_sign_in);
         mSignUpButton = (Button) findViewById(R.id.button_sign_up);
         mForgotPasswordButton =(Button) findViewById(R.id.button_forgot_password);
@@ -111,6 +111,8 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         showProgressDialog();
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
+        String sexe = mSexeField.getText().toString();
+        /****/
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
@@ -170,7 +172,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private void onSignUpSuccess(FirebaseUser user) {
         String username = usernameFromEmail(user.getEmail());
         // Write new user
-        writeNewUser(user.getUid(), username, user.getEmail());
+        writeNewUser(user.getUid(), username, user.getEmail(),mSexeField.getText().toString());
         // Go to PostsHomeActivity
         startActivity(new Intent(SignInActivity.this, MainActivity.class));
         finish();
@@ -204,8 +206,8 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     }
 
     // [START basic_write]
-    private void writeNewUser(String userId, String name, String email) {
-        User user = new User(name, email);
+    private void writeNewUser(String userId, String name, String email, String sexe) {
+        User user = new User(name, email,sexe);
         user.lastVisit= System.currentTimeMillis();
 
         mDatabase.child("users").child(userId).setValue(user);
