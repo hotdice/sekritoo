@@ -37,37 +37,6 @@ public class NewPostActivity extends AppCompatActivity {
     private FloatingActionButton mSubmitButton;
     private Switch mSwitchField;
 
-
-//    @Nullable
-//    @Override
-//    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-//        //returning our layout file
-//        //change R.layout.yourlayoutfilename for each of your fragments
-//        return inflater.inflate(R.layout.activity_new_post, container, false);
-//    }
-
-//    @Override
-//    public void onViewCreated(View view, @Nullable Bundle savedInstanceState) {
-//        super.onViewCreated(view, savedInstanceState);
-//        //you can set the title for your toolbar here for different fragments different titles
-//        getActivity().setTitle("New post");
-//        // [START initialize_database_ref]
-//        mDatabase = FirebaseDatabase.getInstance().getReference();
-//        // [END initialize_database_ref]
-//
-//        mTitleField = (EditText) view.findViewById(R.id.field_title);
-//        mBodyField = (EditText) view.findViewById(R.id.field_body);
-//        mSubmitButton = (FloatingActionButton) view.findViewById(R.id.fab_submit_post);
-//        mSwitchField = (Switch) view.findViewById(R.id.switch_username);
-//
-//        mSubmitButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                submitPost();
-//            }
-//        });
-//
-//    }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
