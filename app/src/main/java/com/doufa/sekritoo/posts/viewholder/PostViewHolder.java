@@ -1,13 +1,28 @@
 package com.doufa.sekritoo.posts.viewholder;
 
+import android.graphics.Color;
+import android.provider.Settings;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.doufa.sekritoo.R;
+import com.doufa.sekritoo.posts.PostsHomeActivity;
 import com.doufa.sekritoo.posts.models.Post;
+import com.doufa.sekritoo.posts.models.User;
 import com.doufa.sekritoo.posts.utils.Utils;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
+
+import java.text.DateFormat;
 
 public class PostViewHolder extends RecyclerView.ViewHolder {
 

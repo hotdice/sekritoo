@@ -1,5 +1,6 @@
 package com.doufa.sekritoo;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -30,7 +31,6 @@ public class UserProfileActivity extends Fragment {
     private TextView mUserCountryTextView;
     private TextView mUserSignUpDateTextView;
     private TextView mUserLastVisitTextView;
-    private TextView mUserSexeTextView;
 
     //    private EditText mUpdateCountryEditext;
     private EditText mUpdateSexeEditext;
@@ -49,33 +49,12 @@ public class UserProfileActivity extends Fragment {
         //you can set the title for your toolbar here for different fragments different titles
         getActivity().setTitle("Account");
 
-
-      //  mEditProfileButton = (Button) view.findViewById(R.id.editButton);
-       // mCancelEditionButton = (Button) view.findViewById(R.id.cancelEditionButton);
         mUsernameTextView = (TextView) view.findViewById(R.id.userNameTitle);
         mUsermailTextView = (TextView) view.findViewById(R.id.userEmailTitle);
         mUserSignUpDateTextView = (TextView) view.findViewById(R.id.userSignUpDate);
         mUserLastVisitTextView = (TextView) view.findViewById(R.id.userLastVisitDate);
-
-        // mUserCountryTextView = (TextView) view.findViewById(R.id.userCountryTitle);
-       // mUserSexeTextView = (TextView) view.findViewById(R.id.userSexe);
-        //mUpdateSexeEditext = (EditText) view.findViewById(R.id.updateSexeEdittext);
         refreshProfileInformation();
     }
-//    @Override
-//    protected void onCreate(Bundle savedInstanceState) {
-//        super.onCreate(savedInstanceState);
-//        setContentView(R.layout.activity_user_profile);
-//
-//        mEditProfileButton = (Button) findViewById(R.id.editButton);
-//        mCancelEditionButton = (Button) findViewById(R.id.cancelEditionButton);
-//        mUsernameTextView = (TextView) findViewById(R.id.userNameTitle);
-//        mUsermailTextView = (TextView) findViewById(R.id.userEmailTitle);
-//        mUserSignUpDateTextView = (TextView) findViewById(R.id.userSignUpDate);
-//        mUserCountryTextView = (TextView) findViewById(R.id.userCountryTitle);
-//        mUserSexeTextView = (TextView) findViewById(R.id.userSexe);
-//        mUpdateSexeEditext = (EditText) findViewById(R.id.updateSexeEdittext);
-//    }
 
     @Override
     public void onStart() {
@@ -85,16 +64,10 @@ public class UserProfileActivity extends Fragment {
 
     public void refreshProfileInformation() {
 
-//        FirebaseUser user =FirebaseAuth.getInstance().getCurrentUser();
-//        mUsernameTextView.setText(String.format(getString(R.string.username), user.getDisplayName().));
-//        mUsermailTextView.setText(String.format(getString(R.string.useremail), user.getEmail()));
-        // mUserSignUpDateTextView.setText(String.format(getString(R.string.userSignUpDate),user.signed_up_at);
-        //        ImageView userPicture = (ImageView) findViewById(R.id.userPicture);
-//        Picasso.with(getApplicationContext()).load(mUser.getPhotoUrl().into(userPicture);
+       if(isAdded()){
         final String uid = FirebaseAuth.getInstance().getCurrentUser().getUid();
         FirebaseDatabase.getInstance().getReference().child("users").child(uid)
                 .addListenerForSingleValueEvent(new ValueEventListener() {
-
 
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
@@ -111,6 +84,7 @@ public class UserProfileActivity extends Fragment {
                                 DateFormat.getDateTimeInstance().format(user.lastVisit)));
                     }
                 });
+           }
 
     }
 }

@@ -33,7 +33,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private EditText mEmailField;
     private EditText mPasswordField;
     private EditText mResetEmailField;
-
     private Button mSignInButton;
     private Button mSignUpButton;
     private Button mForgotPasswordButton;
@@ -51,7 +50,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         mEmailField = (EditText) findViewById(R.id.field_email);
         mPasswordField = (EditText) findViewById(R.id.field_password);
         mResetEmailField = (EditText) findViewById(R.id.field_resetEmail);
-
         mSignInButton = (Button) findViewById(R.id.button_sign_in);
         mSignUpButton = (Button) findViewById(R.id.button_sign_up);
         mForgotPasswordButton =(Button) findViewById(R.id.button_forgot_password);
@@ -111,6 +109,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         showProgressDialog();
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
+        /****/
 
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
