@@ -33,8 +33,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private EditText mEmailField;
     private EditText mPasswordField;
     private EditText mResetEmailField;
-    private EditText mSexeField;
-
     private Button mSignInButton;
     private Button mSignUpButton;
     private Button mForgotPasswordButton;
@@ -111,7 +109,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         showProgressDialog();
         String email = mEmailField.getText().toString();
         String password = mPasswordField.getText().toString();
-        String sexe = mSexeField.getText().toString();
         /****/
 
         mAuth.createUserWithEmailAndPassword(email, password)
@@ -172,7 +169,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     private void onSignUpSuccess(FirebaseUser user) {
         String username = usernameFromEmail(user.getEmail());
         // Write new user
-        writeNewUser(user.getUid(), username, user.getEmail(),mSexeField.getText().toString());
+        writeNewUser(user.getUid(), username, user.getEmail());
         // Go to PostsHomeActivity
         startActivity(new Intent(SignInActivity.this, MainActivity.class));
         finish();
@@ -206,8 +203,8 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
     }
 
     // [START basic_write]
-    private void writeNewUser(String userId, String name, String email, String sexe) {
-        User user = new User(name, email,sexe);
+    private void writeNewUser(String userId, String name, String email) {
+        User user = new User(name, email);
         user.lastVisit= System.currentTimeMillis();
 
         mDatabase.child("users").child(userId).setValue(user);
