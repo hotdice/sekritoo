@@ -222,7 +222,6 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         else if (i==R.id.button_forgot_password){
             mSendResetEmailButton.setVisibility(View.VISIBLE);
             mResetEmailField.setVisibility(View.VISIBLE);
-
         } else if(i== R.id.button_sendResetMail){
             resetPassword();
         }
