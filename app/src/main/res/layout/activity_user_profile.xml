@@ -46,46 +46,43 @@
         android:layout_below="@+id/UserAvatarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
+        android:orientation="vertical"
         android:gravity="center_horizontal"
         android:background="@color/cardview_light_background"
-        android:elevation="1dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
+        android:elevation="2dp"
         >
         <TextView
             android:id="@+id/userEmailTitle"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/useremail"
             android:textColor="@android:color/black"
             android:textAlignment="center"
             android:textStyle="normal|bold"
-            android:paddingRight="10dp"
-            android:background="@drawable/border_shadow_vertical"
+            android:padding="10dp"
+            android:background="@drawable/border_shadow_horizental"
             />
 
         <TextView
             android:id="@+id/userLastVisitDate"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/userLastVisitDate"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textStyle="normal|bold"
             android:textAlignment="center"
-            android:paddingRight="10dp"
-            android:paddingLeft="10dp"
-            android:background="@drawable/border_shadow_vertical"/>
+            android:padding="10dp"
+            android:background="@drawable/border_shadow_horizental"/>
 
         <TextView
             android:id="@+id/userSignUpDate"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/userSignUpDate"
             android:textAppearance="@style/TextAppearance.AppCompat"
             android:textStyle="normal|bold"
             android:textAlignment="center"
-            android:paddingLeft="10dp"
+            android:padding="10dp"
             />
 
     </LinearLayout>
