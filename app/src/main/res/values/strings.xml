@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sekritoo</string>
+    <string name="app_name">Sekritou</string>
     <string name="menu_logout">Log out</string>
     <string name="sign_up">Sign Up</string>
     <string name="hint_password">Password</string>
@@ -28,7 +28,7 @@
     <string name="sekritoo_slogon1_ar">الناس لكلّ عندها أسرار.</string>
     <string name="sekritoo_slogon2_ar">شاركنا سرّك و إلاّ حكايتك من غير ما يعرفك حدّ.</string>
     
-    <string name="sign_msg">Sing up with a valid email if you want to recover your password if lost. Otherwise use a fake one\n(Exp: nickname@sekritoo.com).</string>
+    <string name="sign_msg">Sing up with a valid email if you want to recover your password if lost. Otherwise use a fake one\n(Exp: nickname@sekritou.com).</string>
        <string name="sign_notif">Your identity remains unknown, no one will ever know you.</string>
 
     <!--sign up/in activity  text-->

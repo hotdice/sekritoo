@@ -21,10 +21,10 @@
 -keepattributes EnclosingMethod
 -keepattributes InnerClasses
 
--keep class com.doufa.sekritoo.posts.viewholder.** {
+-keep class com.doufa.sekritou.posts.viewholder.** {
     *;
 }
 
--keepclassmembers class com.doufa.sekritoo.posts.models.** {
+-keepclassmembers class com.doufa.sekritou.posts.models.** {
     *;
 }

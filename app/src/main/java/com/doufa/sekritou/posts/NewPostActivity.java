@@ -1,4 +1,4 @@
-package com.doufa.sekritoo.posts;
+package com.doufa.sekritou.posts;
 
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -10,9 +10,9 @@ import android.widget.EditText;
 import android.widget.Switch;
 import android.widget.Toast;
 
-import com.doufa.sekritoo.R;
-import com.doufa.sekritoo.posts.models.Post;
-import com.doufa.sekritoo.posts.models.User;
+import com.doufa.sekritou.R;
+import com.doufa.sekritou.posts.models.Post;
+import com.doufa.sekritou.posts.models.User;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

@@ -1,4 +1,4 @@
-package com.doufa.sekritoo.posts;
+package com.doufa.sekritou.posts;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,10 +11,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.doufa.sekritoo.R;
-import com.doufa.sekritoo.posts.fragment.MyPostsFragment;
-import com.doufa.sekritoo.posts.fragment.RecentPostsFragment;
-import com.doufa.sekritoo.posts.fragment.TopPostsFragment;
+import com.doufa.sekritou.R;
+import com.doufa.sekritou.posts.fragment.MyPostsFragment;
+import com.doufa.sekritou.posts.fragment.RecentPostsFragment;
+import com.doufa.sekritou.posts.fragment.TopPostsFragment;
 
 public class PostsHomeActivity extends Fragment {
 

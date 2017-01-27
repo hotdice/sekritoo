@@ -1,4 +1,4 @@
-package com.doufa.sekritoo.posts.fragment;
+package com.doufa.sekritou.posts.fragment;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,10 +10,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import com.doufa.sekritoo.R;
-import com.doufa.sekritoo.posts.PostDetailActivity;
-import com.doufa.sekritoo.posts.models.Post;
-import com.doufa.sekritoo.posts.viewholder.PostViewHolder;
+import com.doufa.sekritou.R;
+import com.doufa.sekritou.posts.PostDetailActivity;
+import com.doufa.sekritou.posts.models.Post;
+import com.doufa.sekritou.posts.viewholder.PostViewHolder;
 import com.firebase.ui.database.FirebaseRecyclerAdapter;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;

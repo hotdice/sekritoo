@@ -1,4 +1,4 @@
-package com.doufa.sekritoo;
+package com.doufa.sekritou;
 
 import android.app.ProgressDialog;
 import android.support.v7.app.AppCompatActivity;

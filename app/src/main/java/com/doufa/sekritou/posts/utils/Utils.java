@@ -1,4 +1,4 @@
-package com.doufa.sekritoo.posts.utils;
+package com.doufa.sekritou.posts.utils;
 
 import java.text.DateFormat;
 

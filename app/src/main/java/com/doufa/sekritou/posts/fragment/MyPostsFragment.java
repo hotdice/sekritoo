@@ -1,4 +1,4 @@
-package com.doufa.sekritoo.posts.fragment;
+package com.doufa.sekritou.posts.fragment;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.Query;

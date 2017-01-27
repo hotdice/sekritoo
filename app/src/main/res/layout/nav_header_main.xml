@@ -16,7 +16,7 @@
         android:id="@+id/imageView"
         android:layout_width="150dp"
         android:layout_height="150dp"
-        android:src="@mipmap/ic_sekritoo_short_t"
+        android:src="@mipmap/ic_sekritou_icon"
         android:adjustViewBounds="true"
         android:cropToPadding="true" />
 

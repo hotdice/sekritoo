@@ -1,4 +1,4 @@
-package com.doufa.sekritoo;
+package com.doufa.sekritou;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,8 +13,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.doufa.sekritoo.auth.SignInActivity;
-import com.doufa.sekritoo.posts.PostsHomeActivity;
+import com.doufa.sekritou.auth.SignInActivity;
+import com.doufa.sekritou.posts.PostsHomeActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity

@@ -1,4 +1,4 @@
-package com.doufa.sekritoo.posts.models;
+package com.doufa.sekritou.posts.models;
 
 import com.google.firebase.database.Exclude;
 import com.google.firebase.database.IgnoreExtraProperties;

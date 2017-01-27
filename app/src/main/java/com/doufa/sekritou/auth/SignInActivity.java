@@ -1,8 +1,7 @@
-package com.doufa.sekritoo.auth;
+package com.doufa.sekritou.auth;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.SystemClock;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
 import android.util.Log;
@@ -11,10 +10,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.doufa.sekritoo.BaseActivity;
-import com.doufa.sekritoo.MainActivity;
-import com.doufa.sekritoo.R;
-import com.doufa.sekritoo.posts.models.User;
+import com.doufa.sekritou.BaseActivity;
+import com.doufa.sekritou.MainActivity;
+import com.doufa.sekritou.R;
+import com.doufa.sekritou.posts.models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
