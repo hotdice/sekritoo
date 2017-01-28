@@ -27,17 +27,17 @@
 
     <string name="sekritoo_slogon1_ar">الناس لكلّ عندها أسرار.</string>
     <string name="sekritoo_slogon2_ar">شاركنا سرّك و إلاّ حكايتك من غير ما يعرفك حدّ.</string>
-    
-    <string name="sign_msg">Sing up with a valid email if you want to recover your password if lost. Otherwise use a fake one\n(Exp: nickname@sekritou.com).</string>
-       <string name="sign_notif">Your identity remains unknown, no one will ever know you.</string>
 
-    <!--sign up/in activity  text-->
+
+    <!--sign in activity  text-->
     <string name="text_forgotPassword">Forgot Password?</string>
     <string name="button_sendResetMail">Send reset mail</string>
     <string name="field_resetEmail">Enter your email&#8230;</string>
-
+    <string name="sign_msg">Do not forget your password. If you do, there is no way to recover it.</string>
+    <string name="sign_msg1">Sing up with a valid email if you want to recover your password if lost. Otherwise use a fake one\n(Exp: nickname@sekritou.com).</string>
+    <string name="sign_notif">Speak out the hidden anonymously!</string>
+    <string name="sign_notif1">Pick up a username and jump in!\nYour identity remains unknown, no one will never know you.</string>
     <!---->
-
 
     <!--post detail activity-->
     <string name="button_post_comment">Post</string>

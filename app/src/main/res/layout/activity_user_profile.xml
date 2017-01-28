@@ -1,12 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_user_profile"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     tools:context="com.doufa.sekritou.UserProfileActivity">
+
+<LinearLayout
+    android:id="@+id/activity_user_profile"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    >
 
     <LinearLayout
         android:id="@+id/UserAvatarLayout"
@@ -43,7 +48,6 @@
 
     <LinearLayout
         android:id="@+id/userDetailLayout"
-        android:layout_below="@+id/UserAvatarLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -83,10 +87,67 @@
             android:textStyle="normal|bold"
             android:textAlignment="center"
             android:padding="10dp"
+            android:background="@drawable/border_shadow_horizental"
             />
+        <Button
+            android:id="@+id/button_deleteMyAccount"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Delete my account"
+            style="@android:style/Widget.DeviceDefault.Button.Borderless"
+            android:textColor="@android:color/holo_red_light"
+            android:textAlignment="center"
+            android:textStyle="normal|bold" />
+
+            <Button
+                android:text="Update password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/button_updatePassword"
+                android:textAllCaps="true"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@color/colorPrimary"
+                android:visibility="gone"/>
+
+            <EditText
+                android:id="@+id/field_newPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAlignment="center"
+                android:hint="Your new password..."
+                android:inputType="textPassword"
+                android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            >
+            <Button
+            android:text="Cancel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+                android:visibility="gone"
+            android:id="@+id/button_cancelUpdatePassword"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored" />
+
+            <Button
+                android:text="Confirm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:visibility="gone"
+                android:id="@+id/button_confirmUpdatePassword"
+                style="@style/Widget.AppCompat.Button.Borderless"
+                android:textColor="@android:color/holo_green_dark" />
+        </LinearLayout>
 
     </LinearLayout>
 
+
 </LinearLayout>
+</ScrollView>
 
 

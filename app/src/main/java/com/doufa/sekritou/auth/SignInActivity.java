@@ -25,6 +25,7 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SignInActivity extends BaseActivity implements View.OnClickListener {
 
     private static final String TAG = "SignInActivity";
+    private final String mEmail="@sekritou.com";
 
     private DatabaseReference mDatabase;
     private FirebaseAuth mAuth;
@@ -78,7 +79,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
         }
 
         showProgressDialog();
-        final String email = mEmailField.getText().toString();
+        final String email = mEmailField.getText().toString()+mEmail;
         final String password = mPasswordField.getText().toString();
 
         mAuth.signInWithEmailAndPassword(email, password)
@@ -106,7 +107,7 @@ public class SignInActivity extends BaseActivity implements View.OnClickListener
             return;
         }
         showProgressDialog();
-        String email = mEmailField.getText().toString();
+        String email = mEmailField.getText().toString()+mEmail;
         String password = mPasswordField.getText().toString();
         /****/
 

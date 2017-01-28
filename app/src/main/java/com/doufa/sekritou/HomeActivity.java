@@ -47,7 +47,6 @@ public class HomeActivity extends Fragment {
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.content_frame, fragment);
                 ft.commit();
-
             }
         });
 

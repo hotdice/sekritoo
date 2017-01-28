@@ -165,7 +165,7 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
                         String commentText = mCommentField.getText().toString();
                         Comment comment;
                         if(uid.equals(postAuthorUid))
-                        comment = new Comment(uid, "Secret owner", commentText);
+                            comment = new Comment(uid, "Secret owner", commentText);
                         else
                             comment = new Comment(uid, authorName, commentText);
 
@@ -175,9 +175,13 @@ public class PostDetailActivity extends BaseActivity implements View.OnClickList
                         // Clear the field
                         mCommentField.setText(null);
 
-                        mPostReference.child("commCount").setValue(mAdapter.getItemCount()+1);
+                        // update post's comment numbers
+                        int commCount = mAdapter.getItemCount()+1 ;
+                        mPostReference.child("commCount").setValue(commCount);
+                        FirebaseDatabase.getInstance().getReference()
+                                .child("user-posts").child(postAuthorUid).child(mPostKey)
+                                .child("commCount").setValue(commCount);
                     }
-
                     @Override
                     public void onCancelled(DatabaseError databaseError) {
 
