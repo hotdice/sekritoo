@@ -14,6 +14,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.doufa.sekritou.auth.SignInActivity;
+import com.doufa.sekritou.notif.IServicePushNotif;
 import com.doufa.sekritou.posts.PostsHomeActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -37,6 +38,10 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         displaySelectedScreen(R.id.nav_home);
+
+        // lunch push notif service
+         Intent pnsIntent = new Intent(MainActivity.this, IServicePushNotif.class);
+         startService(pnsIntent);
     }
 
     @Override

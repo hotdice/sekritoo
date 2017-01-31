@@ -102,12 +102,9 @@ public class NewPostActivity extends AppCompatActivity {
                             else
                                 writeNewPost(userId, "Anonyme", title, body);
                         }
-
                         // Finish this Activity, back to the stream
                         setEditingEnabled(true);
                         finish();
-
-
                         // [END_EXCLUDE]
                     }
 
