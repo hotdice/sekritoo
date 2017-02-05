@@ -1,6 +1,7 @@
 package com.doufa.sekritou.notif;
 
 import android.app.IntentService;
+import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.app.TaskStackBuilder;
@@ -128,26 +129,25 @@ public class IServicePushNotif extends IntentService {
 
     private void  pushNotif(String post_key, String subject, String body){
 
-        NotificationCompat.Builder mBuilder =
-                new NotificationCompat.Builder(getApplicationContext())
-                .setContentTitle("Sekritou")
-                        .setSubText(body)
-                .setContentText(subject)
-                .setSmallIcon(R.mipmap.ic_sekritou_icon);
-
         Intent resultIntent = new Intent(getApplicationContext(),PostDetailActivity.class);
         resultIntent.putExtra("post_key",post_key);
 
-        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
-        stackBuilder.addParentStack(PostDetailActivity.class);
-        stackBuilder.addNextIntent(resultIntent);
+//        TaskStackBuilder stackBuilder = TaskStackBuilder.create(this);
+//        stackBuilder.addParentStack(PostDetailActivity.class);
+//        stackBuilder.addNextIntent(resultIntent);
 
-        PendingIntent resultPendingIntent = stackBuilder.getPendingIntent(0, PendingIntent.FLAG_UPDATE_CURRENT);
+        PendingIntent resultPendingIntent = PendingIntent.getActivity(this,0, resultIntent,PendingIntent.FLAG_UPDATE_CURRENT);
 
-        mBuilder.setContentIntent(resultPendingIntent);
+        NotificationCompat.Builder mBuilder =
+                new NotificationCompat.Builder(getApplicationContext())
+                        .setContentTitle("Sekritou")
+                        .setSubText(body)
+                        .setContentText(subject)
+                        .setSmallIcon(R.mipmap.ic_sekritou_icon)
+                        .setContentIntent(resultPendingIntent)
+                        .setAutoCancel(true);
 
         NotificationManager mNotificationManager = (NotificationManager) getSystemService(Context.NOTIFICATION_SERVICE);
-
         mNotificationManager.notify(0, mBuilder.build());
     }
 

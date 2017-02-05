@@ -41,7 +41,7 @@
 
     <!--post detail activity-->
     <string name="button_post_comment">Post</string>
-    <string name="field_comment_text">Write a comment...</string>
+    <string name="field_comment_text">Write a comment&#8230;</string>
     <!---->
 
     <!-- user profile -->
@@ -62,6 +62,10 @@
     <string name="section_format">Hello World from section: %1$d</string>
     <!-- END Auth0 user profile -->
 
+
+    <!-- New post activity-->
+    <string name="notif_new_post">If your post does not contain a secret, it will most likely be removed.</string>
+    <!---->
     <string name="lorem"> My first post text</string>
 
 

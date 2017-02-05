@@ -38,6 +38,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="34dp"
         android:id="@+id/switch_username"
+        android:textAppearance="@style/TextAppearance.AppCompat.Button"
+        android:switchPadding="20dp"
         android:checked="false" />
 
     <android.support.design.widget.FloatingActionButton
@@ -49,6 +51,17 @@
         android:layout_alignParentRight="true"
         android:layout_margin="16dp"
         android:src="@drawable/ic_navigation_check_24" />
+
+    <TextView
+        android:text="@string/notif_new_post"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/switch_username"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textStyle="normal|bold" />
 
 
 </RelativeLayout>
