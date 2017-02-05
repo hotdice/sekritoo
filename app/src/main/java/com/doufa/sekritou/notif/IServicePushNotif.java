@@ -52,45 +52,28 @@ public class IServicePushNotif extends IntentService {
                String pkey = dataSnapshot.getKey();
                Post post = dataSnapshot.getValue(Post.class);
                  if (!uid.equals(post.uid))
-               pushNotif(pkey,"someone just posted a new secret!",post.body);
-
+                    pushNotif(pkey,"someone just posted a new secret!",post.body);
            }
 
            @Override
-           public void onChildChanged(DataSnapshot dataSnapshot, String s) {
-
-           }
-
+           public void onChildChanged(DataSnapshot dataSnapshot, String s) {}
            @Override
-           public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-           }
-
+           public void onChildRemoved(DataSnapshot dataSnapshot) {}
            @Override
-           public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-           }
-
+           public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
            @Override
-           public void onCancelled(DatabaseError databaseError) {
-
-           }
+           public void onCancelled(DatabaseError databaseError) {}
        });
 
    }
     private void newCommentListener(){
         mDatabase.child("post-comments").addChildEventListener(new ChildEventListener() {
             @Override
-            public void onChildAdded(DataSnapshot dataSnapshot, String s) {
-//                String pkey = dataSnapshot.getKey();
-//                Comment comm = dataSnapshot.getValue(Comment.class);
-//                pushNotif(pkey,comm.author+" just commented on your secret!",comm.text);
-            }
+            public void onChildAdded(DataSnapshot dataSnapshot, String s) {}
 
             @Override
-            public void onChildChanged(DataSnapshot dataSnapshot, String s) {
+            public void onChildChanged(final DataSnapshot dataSnapshot, String s) {
                final String pkey = dataSnapshot.getKey();
-                final Comment comm = dataSnapshot.getValue(Comment.class);
 
                 mDatabase.child("posts").child(pkey).addValueEventListener(new ValueEventListener() {
                     @Override
@@ -98,31 +81,22 @@ public class IServicePushNotif extends IntentService {
                         Post post = data.getValue(Post.class);
 
                         if (post.uid.equals(uid)) {
-                            pushNotif(pkey, comm.author + " just commented on your secret!", comm.text);
+                            Comment comm = dataSnapshot.getValue(Comment.class);
+                            pushNotif(pkey,"Someone just commented on your secret!","");
                         }
                     }
 
                     @Override
-                    public void onCancelled(DatabaseError databaseError) {
-
-                    }
+                    public void onCancelled(DatabaseError databaseError) {}
                 });
             }
 
             @Override
-            public void onChildRemoved(DataSnapshot dataSnapshot) {
-
-            }
-
+            public void onChildRemoved(DataSnapshot dataSnapshot) {}
             @Override
-            public void onChildMoved(DataSnapshot dataSnapshot, String s) {
-
-            }
-
+            public void onChildMoved(DataSnapshot dataSnapshot, String s) {}
             @Override
-            public void onCancelled(DatabaseError databaseError) {
-
-            }
+            public void onCancelled(DatabaseError databaseError) {}
         });
 
     }
